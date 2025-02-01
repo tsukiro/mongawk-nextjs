@@ -1,32 +1,16 @@
 import React from "react";
 import Link from "next/link";
 import { Zap } from "lucide-react";
-import { IconCloud } from "@/components/ui/icon-cloud";
+
 
 const HeroSection = () => {
-  const slugs = [
-    "typescript",
-    "mailgun",
-    "nextauth",
-    "supabase",
-    "react",
-    "nextjs",
-    "stripe",
-    "lemonsqueezy",
-    "tailwindcss",
-    "magicui",
-    "vercel",
-    "nextjs",
-  ];
-  const images = slugs.map(
-    (slug) => `https://cdn.simpleicons.org/${slug}/${slug}`
-  );
+
 
   return (
-    <div className="bg-[#212121] min-h-screen flex items-center px-54 md:px-12">
+    <div className="bg-[#212121] mt-6 min-h-screen flex items-center px-54 md:px-12">
       <div className="max-w-7xl w-full mx-auto py-16 flex justify-between items-center">
         <div>
-          <div className="flex items-center gap-2 mb-6">
+          <div className="flex items-center gap-2 mb-5">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 122 37"
@@ -43,15 +27,17 @@ const HeroSection = () => {
             <span className="bg-[#CFCFCF] text-[#2E1A05] px-2">not weeks</span>
           </h1>
 
-          <p className="text-xl text-[#CFCFCF] mb-8 max-w-2xl">
+          <p className="text-lg text-[#CFCFCF] mb-8 max-w-2xl">
             Tired of wasting time on setup instead of building? ShipFree is the
             fastest way to launch your SaaS, AI tool, or web app—for free. No
             setup headaches, no paywalls—just build and ship!
           </p>
 
           <Link
-            href="#"
-            className="inline-flex items-center gap-2 bg-[#FFBE1A] hover:bg-yellow-500 text-black px-20 py-3 rounded-xl font-medium text-lg mb-6 transition-colors"
+            href="https://github.com/idee8/shipfree"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex mt-5 items-center gap-2 bg-[#FFBE1A] hover:bg-yellow-500 text-black px-20 py-3 rounded-xl font-medium text-lg mb-6 duration-300 transition-colors"
           >
             <Zap fill="#000000" className="w-5 h-5" />
             Get ShipFree

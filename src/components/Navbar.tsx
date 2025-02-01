@@ -20,37 +20,37 @@ export default function Navbar() {
     return count.toString()
   }
   return (
-    <nav className="fixed top-0 z-50 w-full border-b border-white/10 bg-[#1C1C1C]">
+    <nav className="fixed top-0 z-50 w-full bg-[#212121]">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <div className="flex items-center">
           <Link href="/" className="flex items-center gap-2">
             <Zap
-              className="h-11 w-10"
+              className="h-10 w-10"
               fill="#FFBE18"
               stroke="black"
               strokeWidth={1.4}
             />
 
-            <span className="text-lg font-semibold text-white">ShipFast</span>
+            <span className="text-lg font-semibold text-white">ShipFree</span>
           </Link>
         </div>
 
         <div className="hidden items-center gap-8 md:flex">
           <Link
             href="/pricing"
-            className="text-sm text-white/90 transition hover:text-white"
+            className="text-base text-white/90 transition hover:text-white"
           >
             Pricing
           </Link>
           <Link
             href="/demo"
-            className="text-sm text-white/90 transition hover:text-white"
+            className="text-base text-white/90 transition hover:text-white"
           >
             Demo
           </Link>
           <Link
             href="/wall-of-love"
-            className="text-sm text-white/90 transition hover:text-white"
+            className="text-base text-white/90 transition hover:text-white"
           >
             Wall of love
           </Link>

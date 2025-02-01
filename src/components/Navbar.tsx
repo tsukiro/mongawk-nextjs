@@ -25,10 +25,10 @@ export default function Navbar() {
         <div className="flex items-center">
           <Link href="/" className="flex items-center gap-2">
             <Zap
-              className="h-10 w-10"
+              className="h-11 w-10"
               fill="#FFBE18"
               stroke="black"
-              strokeWidth={2}
+              strokeWidth={1.4}
             />
 
             <span className="text-lg font-semibold text-white">ShipFast</span>

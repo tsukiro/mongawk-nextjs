@@ -37,7 +37,7 @@ export default function Navbar() {
 
         <div className="hidden items-center gap-8 md:flex">
           <Link
-            href="@pricing"
+            href="#pricing"
             className="text-base text-white/90 transition hover:text-white"
           >
             Pricing

@@ -3,7 +3,7 @@ import type React from "react"
 
 export default function PricingSection() {
   return (
-    <div className="min-h-screen bg-[#0F0F0F] text-white px-4 py-16">
+    <div id="pricing" className="min-h-screen bg-[#0F0F0F] text-white px-4 py-16">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">

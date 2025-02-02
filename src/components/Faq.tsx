@@ -60,7 +60,7 @@ export default function FAQ() {
   }
 
   return (
-    <div className="min-h-screen bg-[#0F0F0F] px-4 py-12 md:px-6 lg:px-8">
+    <div id="faq" className="min-h-screen bg-[#0F0F0F] px-4 py-12 md:px-6 lg:px-8">
       <div className="mx-auto max-w-3xl">
         <h2 className="mb-4 text-center text-4xl font-medium text-white">Frequently Asked Questions</h2>
         <p className="mb-12 text-center text-base text-zinc-500">

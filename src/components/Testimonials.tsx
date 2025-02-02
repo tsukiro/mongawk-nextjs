@@ -67,7 +67,7 @@ export default function TestimonialsPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-[#0F0F0F] text-white py-16 px-4">
+    <div id="wall-of-love" className="min-h-screen bg-[#0F0F0F] text-white py-16 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">1209 makers built AI tools, SaaS, and more</h1>

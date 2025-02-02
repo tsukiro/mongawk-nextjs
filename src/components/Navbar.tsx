@@ -37,19 +37,19 @@ export default function Navbar() {
 
         <div className="hidden items-center gap-8 md:flex">
           <Link
-            href="/pricing"
+            href="@pricing"
             className="text-base text-white/90 transition hover:text-white"
           >
             Pricing
           </Link>
           <Link
-            href="/demo"
+            href="#faq"
             className="text-base text-white/90 transition hover:text-white"
           >
-            Demo
+            FAQ
           </Link>
           <Link
-            href="/wall-of-love"
+            href="#wall-of-love"
             className="text-base text-white/90 transition hover:text-white"
           >
             Wall of love

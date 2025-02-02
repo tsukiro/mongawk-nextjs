@@ -27,7 +27,7 @@ const HeroSection = () => {
             <span className="bg-[#CFCFCF] text-[#2E1A05] px-2">not weeks</span>
           </h1>
 
-          <p className="text-lg text-[#CFCFCF] mb-8 max-w-2xl">
+          <p className="text-base text-[#CFCFCF] mb-8 max-w-2xl">
             Tired of wasting time on setup instead of building? ShipFree is the
             fastest way to launch your SaaS, AI tool, or web app—for free. No
             setup headaches, no paywalls—just build and ship!

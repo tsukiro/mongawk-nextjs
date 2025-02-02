@@ -1,4 +1,5 @@
-import { CloudRain } from "lucide-react"
+import { CloudRain } from "lucide-react";
+import { FaHackerNews, FaProductHunt, FaTwitter, FaGithub } from "react-icons/fa";
 
 export default function FeaturedTime() {
   const timeBreakdown = [
@@ -10,7 +11,7 @@ export default function FeaturedTime() {
     { time: 3, task: "for DNS records" },
     { time: 2, task: "for protected API routes" },
     { time: "∞", task: "overthinking..." },
-  ]
+  ];
 
   return (
     <div className="bg-[#212121] text-gray-300 py-16 px-4">
@@ -20,26 +21,21 @@ export default function FeaturedTime() {
           <p className="text-gray-300 text-lg uppercase tracking-wider mb-6">Featured on</p>
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
             <div className="flex items-center gap-2 text-gray-400">
-              <div className="w-6 h-6 bg-gray-400"></div>
+              <FaHackerNews className="w-6 h-6 text-gray-400" />
               <span className="text-base">Hacker News</span>
             </div>
             <div className="flex items-center gap-2 text-gray-400">
-              <div className="w-6 h-6 rounded-full bg-gray-400"></div>
+              <FaProductHunt className="w-6 h-6 rounded-full text-gray-400" />
               <span className="text-base">Product Hunt</span>
             </div>
             <div className="flex items-center gap-2 text-gray-400">
-              <div className="w-6 h-6 bg-gray-400"></div>
-              <span className="text-base">X</span>
+              <FaTwitter className="w-6 h-6 text-gray-400" />
+              <span className="text-base">Twitter</span>
             </div>
             <div className="flex items-center gap-2 text-gray-400">
-              <div className="w-6 h-6 rounded-full bg-gray-400"></div>
-              <span className="text-base">Peerlist</span>
+              <FaGithub className="w-6 h-6 rounded-full text-gray-400" />
+              <span className="text-base">GitHub</span>
             </div>
-            <div className="flex items-center gap-2 text-gray-400">
-              <div className="w-6 h-6 rounded-full bg-gray-400"></div>
-              <span className="text-base
-              ">GitHub</span>
-            </div>    
           </div>
         </div>
 
@@ -70,6 +66,5 @@ export default function FeaturedTime() {
         </div>
       </div>
     </div>
-  )
+  );
 }
-

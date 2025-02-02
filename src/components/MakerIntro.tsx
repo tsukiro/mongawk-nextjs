@@ -1,6 +1,6 @@
 export default function MakerIntro() {
     return (
-      <div className="bg-[#212121] min-h-screen text-gray-300 p-8">
+      <div className="bg-[#212121] mb-8 text-gray-300 p-8">
         <div className="max-w-2xl mx-auto space-y-8">
           <div className="flex flex-col md:flex-row gap-8 items-start">
             <div className="relative w-[200px] h-[200px] flex-shrink-0">

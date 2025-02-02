@@ -13,6 +13,10 @@ const faqs: FAQItem[] = [
     answer: "Yes! ShipFree is open-source and community-driven. Use it for unlimited projects, no strings attached.",
   },
   {
+    question: "What do I need to use ShipFree?",
+    answer: "All you need is a GitHub account to clone the repo and a deployment platform like Vercel or Railway.",
+  },
+  {
     question: "Can I customize it?",
     answer: "Built with Next.js, Tailwind, and modern tools, ShipFree is fully extensible.",
   },
@@ -23,7 +27,7 @@ const faqs: FAQItem[] = [
   },
   {
     question: "Does ShipFree include a database?",
-    answer: "Yes! It supports PostgreSQL, MongoDB, and Supabase out of the box.",
+    answer: "Yes! It supports MongoDB and Supabase out of the box.",
   },
   {
     question: "Is there a community I can join?",
@@ -37,11 +41,7 @@ const faqs: FAQItem[] = [
     question: "Can I contribute to ShipFree?",
     answer: "ShipFree is open-source—we welcome contributions from developers worldwide.",
   },
-  {
-    question: "Does ShipFree support AI integrations?",
-    answer:
-      "Yes! ShipFree is designed for AI-powered apps. You can easily integrate ChatGPT, LangChain, and other AI models.",
-  },
+ 
   {
     question: "Can I use ShipFree for commercial projects?",
     answer: "Yes! You can launch and scale real businesses with ShipFree. No restrictions.",
@@ -63,7 +63,7 @@ export default function FAQ() {
     <div className="min-h-screen bg-[#0F0F0F] px-4 py-12 md:px-6 lg:px-8">
       <div className="mx-auto max-w-3xl">
         <h2 className="mb-4 text-center text-4xl font-medium text-white">Frequently Asked Questions</h2>
-        <p className="mb-12 text-center text-sm text-zinc-500">
+        <p className="mb-12 text-center text-base text-zinc-500">
           Have another question? Contact us on{" "}
           <a href="https://x.com/idee8" target="_blank"  className="text-zinc-200 hover:text-white underline">
             Twitter
@@ -82,7 +82,7 @@ export default function FAQ() {
                 onClick={() => toggleQuestion(index)}
                 className="flex w-full items-center justify-between bg-zinc-900/50 px-6 py-4 text-left transition-colors hover:bg-zinc-900"
               >
-                <span className="text-[15px] font-medium text-white">{faq.question}</span>
+                <span className="text-[16px] font-medium text-white">{faq.question}</span>
                 <span className="ml-6 flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-zinc-700">
                   <PlusIcon
                     className={`h-3 w-3 text-white transition-transform duration-200 ${openIndex === index ? "rotate-45" : ""}`}
@@ -95,7 +95,7 @@ export default function FAQ() {
                 }`}
               >
                 <div className="overflow-hidden">
-                  <div className="bg-zinc-900/30 px-6 py-4 text-sm text-zinc-400">{faq.answer}</div>
+                  <div className="bg-zinc-900/30 px-6 py-4 text-base text-zinc-400">{faq.answer}</div>
                 </div>
               </div>
             </div>

@@ -49,7 +49,7 @@ export default function Footer() {
                 🌎 By the Creator of ShipFree
               </h3>
               <ul className="space-y-3 text-sm">
-                {["idee8.agency", "React AI", "Open Source Projects"].map((item) => (
+                {["idee8.agency", "React AI", "Code Mentor"].map((item) => (
                   <li key={item}>
                     <a href="https://idee8.agency" className="text-zinc-400 hover:text-white">
                       {item}

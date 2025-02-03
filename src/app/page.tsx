@@ -1,13 +1,13 @@
-import CTA from "@/components/Cta";
-import FAQ from "@/components/Faq";
-import FeaturedTime from "@/components/FeaturedTime";
-import FeaturesSection from "@/components/FeaturesSection";
-import Footer from "@/components/Footer";
-import HeroSection from "@/components/Hero";
-import MakerIntro from "@/components/MakerIntro";
-import Navbar from "@/components/Navbar";
-import PricingSection from "@/components/pricing";
-import TestimonialsPage from "@/components/Testimonials";
+import CTA from "@/app/(site)/Cta";
+import FAQ from "@/app/(site)/Faq";
+import FeaturedTime from "@/app/(site)/FeaturedTime";
+import FeaturesSection from "@/app/(site)/FeaturesSection";
+import Footer from "@/app/(site)/Footer";
+import HeroSection from "@/app/(site)/Hero";
+import MakerIntro from "@/app/(site)/MakerIntro";
+import Navbar from "@/app/(site)/Navbar";
+import PricingSection from "@/app/(site)/pricing";
+import TestimonialsPage from "@/app/(site)/Testimonials";
 import Image from "next/image";
 
 export default function Home() {

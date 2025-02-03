@@ -1,5 +1,5 @@
-import type { Metadata } from "next"
-import RegisterForm from "@/components/register-form"
+import type { Metadata } from "next";
+import RegisterForm from "@/components/register-form";
 
 export const metadata: Metadata = {
   title: "Register",
@@ -8,9 +8,8 @@ export const metadata: Metadata = {
     title: "Register | My App",
     description: "Create a new account on My App",
   },
-}
+};
 
 export default function Register() {
- return <RegisterForm />
+  return <RegisterForm />;
 }
-

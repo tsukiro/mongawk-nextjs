@@ -42,12 +42,12 @@ export const Sidebar: FC<{ pageMap: PageMapItem[] }> = ({ pageMap }) => {
   const groupedItems = docsDirectories.filter((item) => "children" in item);
 
   return (
-    <aside className="bg-gray-900 text-white w-[280px] h-screen p-6 flex flex-col border-r border-gray-700 overflow-y-auto">
+    <aside className="bg-[#212121] text-white w-[280px] h-screen p-6 flex flex-col border-r border-gray-700/20 overflow-y-auto">
       <Link href="/" className="flex items-center gap-3 mb-8 group">
         <span className="text-xl font-bold tracking-tight">Docs</span>
       </Link>
       <nav className="flex-1">
-        <ul className="space-y-1">
+        <ul className="space-y-1 mb-3">
           {/* Render single items first */}
           {singleItems.map((item: any) => (
             <SidebarItem key={item.route} item={item} />
@@ -61,7 +61,7 @@ export const Sidebar: FC<{ pageMap: PageMapItem[] }> = ({ pageMap }) => {
         <ul className="flex flex-col gap-3 border-t border-blue-500/20 py-4 px-1">
           <Link
             href={"mailto:hi@idee8.agency"}
-            className="flex items-center justify-between hover:bg-gray-800 py-2 px-3 rounded-lg text-gray-500 hover:text-gray-200 cursor-pointer"
+            className="flex items-center justify-between hover:bg-neutral-700 py-2 px-3 rounded-lg text-gray-500 hover:text-neutral-200 cursor-pointer"
           >
             Support
             <span>
@@ -71,7 +71,7 @@ export const Sidebar: FC<{ pageMap: PageMapItem[] }> = ({ pageMap }) => {
           <Link
             href={"https://github.com/Idee8"}
             target="_blank"
-            className="flex items-center justify-between hover:bg-gray-800 py-2 px-3 rounded-lg text-gray-500 hover:text-gray-200 "
+            className="flex items-center justify-between hover:bg-zinc-700 py-2 px-3 rounded-lg text-gray-500 hover:text-neutral-200 "
           >
             Follow updates
             <span>
@@ -81,7 +81,7 @@ export const Sidebar: FC<{ pageMap: PageMapItem[] }> = ({ pageMap }) => {
           <Link
             href={"https://idee8.agency"}
             target="_blank"
-            className="flex items-center justify-between hover:bg-gray-800 py-2 px-3 rounded-lg text-gray-500 hover:text-gray-200 "
+            className="flex items-center justify-between hover:bg-zinc-700 py-2 px-3 rounded-lg text-gray-500 hover:text-neutral-200 "
           >
             Idee8 Agency
             <span>
@@ -126,7 +126,7 @@ const SidebarItem: FC<{ item: any }> = ({ item }) => {
           className={`flex items-center gap-3 py-2 px-3 rounded-lg transition-colors ${
             isActive
               ? "bg-blue-600/20 text-blue-400"
-              : "text-gray-400 hover:bg-gray-800 hover:text-white"
+              : "text-gray-400 hover:bg-neutral-700 hover:text-neutral-200"
           }`}
         >
           <span>{title}</span>

@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@lemonsqueezy/lemonsqueezy.js':
+        specifier: ^4.0.0
+        version: 4.0.0
       '@radix-ui/react-avatar':
         specifier: ^1.1.2
         version: 1.1.2(@types/react-dom@19.0.3(@types/react@19.0.8))(@types/react@19.0.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -35,6 +38,12 @@ importers:
       framer-motion:
         specifier: ^12.0.6
         version: 12.0.9(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      lemonsqueezy:
+        specifier: ^0.0.1-claimed
+        version: 0.0.1-claimed
+      lemonsqueezy.ts:
+        specifier: ^0.1.8
+        version: 0.1.8
       lucide-react:
         specifier: ^0.474.0
         version: 0.474.0(react@19.0.0)
@@ -348,6 +357,10 @@ packages:
 
   '@jridgewell/trace-mapping@0.3.25':
     resolution: {integrity: sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==}
+
+  '@lemonsqueezy/lemonsqueezy.js@4.0.0':
+    resolution: {integrity: sha512-xcY1/lDrY7CpIF98WKiL1ElsfoVhddP7FT0fw7ssOzrFqQsr44HgolKrQZxd9SywsCPn12OTOUieqDIokI3mFg==}
+    engines: {node: '>=20'}
 
   '@mdx-js/mdx@3.1.0':
     resolution: {integrity: sha512-/QxEhPAvGwbQmy1Px8F899L5Uc2KZ6JtXwlCgJmjSTBedwOZkByYcBG4GceIGPXRDsmfxhHazuS+hlOShRLeDw==}
@@ -2226,6 +2239,14 @@ packages:
   layout-base@2.0.1:
     resolution: {integrity: sha512-dp3s92+uNI1hWIpPGH3jK2kxE2lMjdXdr+DH8ynZHpd6PUlH6x6cbuXnoMmiNumznqaNO31xu9e79F0uuZ0JFg==}
 
+  lemonsqueezy.ts@0.1.8:
+    resolution: {integrity: sha512-MfvxYfUoNygMG4mllSQeQjCL2gR6nUc5BUFUQdjZ6EmehU0CnH28IeEcW6sqS8aoLvUkr/ieTPBI0i/QFX67/g==}
+    engines: {node: '>=16.*'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+
+  lemonsqueezy@0.0.1-claimed:
+    resolution: {integrity: sha512-3JxoShysy2+7qKONbEJNZ5NpsO29HMLcHWnj8MwYLdV7IVUoHhPd4hUzyRSKtNRir3IGmGrlpB+OR1S0Bb6BSg==}
+
   levn@0.4.1:
     resolution: {integrity: sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ==}
     engines: {node: '>= 0.8.0'}
@@ -3270,6 +3291,10 @@ packages:
   undici-types@6.19.8:
     resolution: {integrity: sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw==}
 
+  undici@6.21.1:
+    resolution: {integrity: sha512-q/1rj5D0/zayJB2FraXdaWxbhWiNKDvu8naDT2dl1yTlvJp4BLtOcp2a5BvgGNQpYYJzau7tf1WgKv3b+7mqpQ==}
+    engines: {node: '>=18.17'}
+
   unified@11.0.5:
     resolution: {integrity: sha512-xKvGhPWw3k84Qjh8bI3ZeJjqnyadK+GEFtazSfZv/rKeTkTjOJho6mFqh2SM96iIcZokxiOpg78GazTSg8+KHA==}
 
@@ -3690,6 +3715,8 @@ snapshots:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
+
+  '@lemonsqueezy/lemonsqueezy.js@4.0.0': {}
 
   '@mdx-js/mdx@3.1.0(acorn@8.14.0)':
     dependencies:
@@ -5914,6 +5941,12 @@ snapshots:
 
   layout-base@2.0.1: {}
 
+  lemonsqueezy.ts@0.1.8:
+    dependencies:
+      undici: 6.21.1
+
+  lemonsqueezy@0.0.1-claimed: {}
+
   levn@0.4.1:
     dependencies:
       prelude-ls: 1.2.1
@@ -7513,6 +7546,8 @@ snapshots:
       which-boxed-primitive: 1.1.1
 
   undici-types@6.19.8: {}
+
+  undici@6.21.1: {}
 
   unified@11.0.5:
     dependencies:

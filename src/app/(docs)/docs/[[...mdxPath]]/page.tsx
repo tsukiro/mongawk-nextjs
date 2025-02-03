@@ -17,7 +17,9 @@ export default async function Page(props: any) {
   const { default: MDXContent, toc, metadata } = result;
   return (
     <Wrapper toc={toc} metadata={metadata}>
-      <MDXContent {...props} params={params} />
+      <div className="max-w-4xl md:prose-lg lg:prose-xl md:px-10 px-3 prose-zinc">
+        <MDXContent {...props} params={params} />
+      </div>
     </Wrapper>
   );
 }

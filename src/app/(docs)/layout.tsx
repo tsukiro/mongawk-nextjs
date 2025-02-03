@@ -6,7 +6,7 @@ import { NextraTheme } from "./_components/nextra-theme";
 export const metadata: Metadata = {
   title: {
     absolute: "",
-    template: "%s - Nextra",
+    template: "%s - ShipFree",
   },
 };
 

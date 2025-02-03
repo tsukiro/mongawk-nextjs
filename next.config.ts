@@ -1,10 +1,10 @@
-import type { NextConfig } from "next";
+import nextra from "nextra";
 
-const nextConfig: NextConfig = {
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  /* config options here */
-};
+const withNextra = nextra({ contentDirBasePath: "/docs" });
 
-export default nextConfig;
+export default withNextra({
+  output: "export",
+  eslint: { ignoreDuringBuilds: true },
+  typescript: { ignoreBuildErrors: true },
+  pageExtensions: ["tsx", "mdx"],
+});

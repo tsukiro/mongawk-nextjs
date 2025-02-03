@@ -1,57 +1,44 @@
-"use client"
-
-import { useState } from "react"
-import { useRouter } from "next/navigation"
-import { createClient } from "../../lib/supabase/client"
+import { createClient } from "@/lib/supabase/server"
+import { redirect } from "next/navigation"
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
+import type { Metadata } from "next"
 
-export default function Register() {
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
-  const router = useRouter()
+export const metadata: Metadata = {
+  title: "Dashboard",
+  description: "Your personal dashboard",
+  openGraph: {
+    title: "Dashboard | My App",
+    description: "Access your personal dashboard on My App",
+  },
+}
+
+export default async function Dashboard() {
   const supabase = createClient()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
 
-  const handleRegister = async (e: React.FormEvent) => {
-    e.preventDefault()
-    const { error } = await supabase.auth.signUp({ email, password })
-    if (error) {
-      console.error("Error registering:", error.message)
-    } else {
-      router.push("/dashboard")
-    }
+  if (!user) {
+    redirect("/auth/login")
+  }
+
+  const handleSignOut = async () => {
+    "use server"
+    const supabase = createClient()
+    await supabase.auth.signOut()
+    redirect("/auth/login")
   }
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
       <div className="w-full max-w-md p-8 space-y-6 bg-white rounded-lg shadow-md">
-        <h1 className="text-2xl font-bold text-center">Register</h1>
-        <form onSubmit={handleRegister} className="space-y-4">
-          <div>
-            <Label htmlFor="email">Email</Label>
-            <Input id="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-          </div>
-          <div>
-            <Label htmlFor="password">Password</Label>
-            <Input
-              id="password"
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
-          </div>
+        <h1 className="text-2xl font-bold text-center">Dashboard</h1>
+        <p className="text-center">Welcome, {user.email}!</p>
+        <form action={handleSignOut}>
           <Button type="submit" className="w-full">
-            Register
+            Sign Out
           </Button>
         </form>
-        <p className="text-center">
-          Already have an account?{" "}
-          <a href="/auth/login" className="text-blue-500 hover:underline">
-            Login
-          </a>
-        </p>
       </div>
     </div>
   )

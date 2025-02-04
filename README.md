@@ -12,10 +12,6 @@ ShipFree is a free alternative to ShipFast, designed to simplify and optimize yo
 - Email notifications via Mailgun
 - Modern UI built with Next.js and TailwindCSS
 
-## Live Demo
-
-Check out the live demo: [Shipfree](https://shipfree.idee8.agency)
-
 ## Docs
 
 For full documentation, visit: [ShipFree Docs](https://shipfree.idee8.agency/docs)
@@ -23,6 +19,10 @@ For full documentation, visit: [ShipFree Docs](https://shipfree.idee8.agency/doc
 ## Code of Conduct
 
 Please read our [Code of Conduct](CODE_OF_CONDUCT.md) before contributing.
+
+## Contributing
+
+For people who want to contribute, please refer to [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ----
 

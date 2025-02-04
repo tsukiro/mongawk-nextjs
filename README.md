@@ -18,7 +18,7 @@ Check out the live demo: [Shipfree](https://shipfree.idee8.agency)
 
 ## Docs
 
-For full documentation, visit: [Docs](https://shipfree.idee8.agency/docs)
+For full documentation, visit: [ShipFree Docs](https://shipfree.idee8.agency/docs)
 
 ----
 Cooked for you with ❤️ by [Idee8](https://idee8.agency)

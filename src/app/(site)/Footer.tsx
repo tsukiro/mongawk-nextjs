@@ -40,7 +40,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://x.com/idee8"
+                  href="https://x.com/idee8agency"
                   target="_blank"
                   className="text-zinc-400 hover:text-white"
                 >

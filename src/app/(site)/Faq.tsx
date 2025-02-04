@@ -65,7 +65,7 @@ export default function FAQ() {
         <h2 className="mb-4 text-center text-4xl font-medium text-white">Frequently Asked Questions</h2>
         <p className="mb-12 text-center text-base text-zinc-500">
           Have another question? Contact us on{" "}
-          <a href="https://x.com/idee8" target="_blank"  className="text-zinc-200 hover:text-white underline">
+          <a href="https://x.com/idee8agency" target="_blank"  className="text-zinc-200 hover:text-white underline">
             Twitter
           </a>{" "}
           or by{" "}

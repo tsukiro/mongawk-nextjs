@@ -1,6 +1,5 @@
+import { Metadata } from "next";
 import Link from "next/link";
-
-
 
 // CHATGPT PROMPT TO GENERATE YOUR TERMS & SERVICES — replace with your own data 👇
 
@@ -25,7 +24,9 @@ import Link from "next/link";
 
 // Please write a simple Terms & Services for my site. Add the current date. Do not add or explain your reasoning. Answer:
 
-
+export const metadata: Metadata = {
+  title: "Privacy policy",
+};
 
 const TOS = () => {
   return (

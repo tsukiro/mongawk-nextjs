@@ -10,7 +10,9 @@ export default function CTA() {
             Don&apos;t waste time on Stripe subscriptions or designing a pricing section...
           </p>
           <a
-            href="#"
+            href="https://github.com/idee8/shipfree"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-lg bg-[#FFB800] px-6 py-3 text-base font-medium text-black transition-colors hover:bg-[#FFB800]/90"
           >
             <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5" xmlns="http://www.w3.org/2000/svg">

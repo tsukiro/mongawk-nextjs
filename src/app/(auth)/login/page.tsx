@@ -9,8 +9,10 @@ export const metadata: Metadata = {
     title: "Login | My App",
     description: "Log in to your account on My App",
   },
-}
+};
 
 export default function Login() {
-  return <LoginForm />;
+
+
+  return <LoginForm  />;
 }

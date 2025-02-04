@@ -1,4 +1,5 @@
 "use client"
+import SEO from "@/utils/seo"
 
 import { useState } from "react"
 import { useRouter } from "next/navigation"
@@ -47,6 +48,14 @@ export default function LoginForm() {
   }
 
   return (
+    <>
+    <SEO
+        title="My SaaS Boilerplate"
+        description="A Next.js TypeScript Login form."
+        canonicalUrl="https://yourdomain.com"
+        ogImageUrl="https://yourdomain.com/og-image.png"
+        twitterHandle="yourtwitterhandle"
+      />
     <div className="space-y-6">
       <form onSubmit={handleLogin} className="space-y-4">
         <div className="space-y-2">
@@ -82,6 +91,7 @@ export default function LoginForm() {
         </Link>
       </p>
     </div>
+    </>
   )
 }
 

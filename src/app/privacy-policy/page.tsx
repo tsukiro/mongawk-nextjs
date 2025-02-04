@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import Link from "next/link";
 
 // CHATGPT PROMPT TO GENERATE YOUR PRIVACY POLICY — replace with your own data 👇
@@ -23,6 +24,9 @@ import Link from "next/link";
 
 // Please write a simple privacy policy for my site. Add the current date.  Do not add or explain your reasoning. Answer:
 
+export const metadata: Metadata = {
+  title: "Privacy policy",
+};
 
 const PrivacyPolicy = () => {
   return (
@@ -44,7 +48,7 @@ const PrivacyPolicy = () => {
           Voltar
         </Link>
         <h1 className="text-3xl font-extrabold pb-6">
-          Política de Privacidade do 
+          Política de Privacidade do
         </h1>
 
         <pre

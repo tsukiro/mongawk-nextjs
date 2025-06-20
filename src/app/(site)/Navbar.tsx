@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Zap, X } from "lucide-react";
+import { Zap, X, Swords } from "lucide-react";
 import { useEffect, useState } from "react";
 import { getGitHubStars } from "@/utils/github";
 
@@ -30,13 +30,14 @@ export default function Navbar() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <div className="flex items-center">
           <Link href="/" className="flex items-center gap-2">
-            <Zap
+          <span className="text-lg font-semibold text-white">Mong</span>
+            <Swords
               className="h-10 w-10"
-              fill="#FFBE18"
+              fill="white"
               stroke="black"
               strokeWidth={1.4}
             />
-            <span className="text-lg font-semibold text-white">ShipFree</span>
+            <span className="text-lg font-semibold text-white">Awk</span>
           </Link>
         </div>
 
@@ -61,7 +62,7 @@ export default function Navbar() {
           </Link>
         </div>
 
-        <div className="hidden items-center gap-2 md:flex">
+       {/*  <div className="hidden items-center gap-2 md:flex">
           <a
             href={`https://github.com/${repo}`}
             target="_blank"
@@ -83,7 +84,7 @@ export default function Navbar() {
               </span>
             )}
           </a>
-        </div>
+        </div> */}
 
         <div className="flex md:hidden">
           <button
@@ -122,7 +123,7 @@ export default function Navbar() {
               className="block rounded-md px-3 py-2 text-base font-medium text-white/90 hover:bg-[#3C3C3C] hover:text-white"
               onClick={toggleMenu}
             >
-              Pricing
+              Precios
             </Link>
             <Link
               href="#faq"
@@ -136,7 +137,7 @@ export default function Navbar() {
               className="block rounded-md px-3 py-2 text-base font-medium text-white/90 hover:bg-[#3C3C3C] hover:text-white"
               onClick={toggleMenu}
             >
-              Wall of love
+              Wall of Heroes
             </Link>
             <Link
               href="/docs"

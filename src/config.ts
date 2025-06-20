@@ -1,9 +1,9 @@
 export const config = {
-  appName: "Shipfree",
+  appName: "Mongawk",
   domainName: "https://shipfree.idee8.agency",
   mailgun: {
     // subdomain to use when sending emails, if you don't have a subdomain, just remove it. Highly recommended to have one (i.e. mg.yourdomain.com or mail.yourdomain.com)
-    subdomain: "mg",
+    subdomain: "",
     // REQUIRED — Email 'From' field to be used when sending magic login links
     fromNoReply: `ShipFree <noreply@ag.shipfree.com>`,
     // REQUIRED — Email 'From' field to be used when sending other emails, like abandoned carts, updates etc..
@@ -13,4 +13,7 @@ export const config = {
     // When someone replies to supportEmail sent by the app, forward it to the email below (otherwise it's lost). If you set supportEmail to empty, this will be ignored.
     forwardRepliesTo: "shipfree@gmail.com",
   },
+  resend: {
+    
+  }
 };

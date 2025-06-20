@@ -1,7 +1,8 @@
 import crypto from "crypto";
 
 import { NextResponse, NextRequest } from "next/server";
-import { sendEmail } from "@/lib/mailgun";
+//import { sendEmail } from "@/lib/mailgun";
+import { sendEmail } from "@/lib/resend";
 import { config } from "@/config";
 
 export async function POST(req: NextRequest) {

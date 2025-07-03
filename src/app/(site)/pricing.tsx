@@ -1,9 +1,17 @@
 "use client";
 
+import { PlanFeatures } from "@/types/PlanFeatures";
+import { Plans } from "@/types/Plans";
 import { Check } from "lucide-react";
 import type React from "react";
 
-export default function PricingSection() {
+export default function PricingSection({
+  plans,
+  planFeatures,
+}: {
+  plans: Plans;
+  planFeatures: PlanFeatures;
+}) {
   return (
     <div
       id="pricing"
@@ -25,86 +33,39 @@ export default function PricingSection() {
         </div>
 
         <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Plan Gratis */}
-          <div className="rounded-xl bg-zinc-900 p-6 border border-green-500/50 relative">
-            <div className="absolute -top-3 right-6 bg-green-500 text-black text-sm font-semibold px-3 py-1 rounded-full">
-              GRATIS
-            </div>
-            <h3 className="text-xl font-semibold mb-4">Plan Básico</h3>
-            <div className="mb-6">
-              <div className="flex items-baseline gap-1">
-                <span className="text-4xl font-bold">$0</span>
-                <span className="text-zinc-500">CLP</span>
+          {plans.status === 200 &&
+            plans.data.sort(plan => plan.priority).map((plan) => (
+              <div
+                key={plan.id}
+                className={`rounded-xl bg-zinc-900 p-6 border border-${plan.plan_color}/50 relative`}
+              >
+                <div className={`absolute -top-3 right-6 bg-${plan.plan_color} text-black text-sm font-semibold px-3 py-1 rounded-full`}>
+                  {plan.short_name.toUpperCase()}
+                </div>
+                <h3 className="text-xl font-semibold mb-4">{plan.long_name}</h3>
+                <div className="mb-6">
+                  <div className="flex items-baseline gap-1">
+                    <span className="text-4xl font-bold">
+                      ${plan.monthly_cost}
+                    </span>
+                    <span className="text-zinc-500">{plan.currency}/mes</span>
+                  </div>
+                  <p className={`text-${plan.plan_color} text-sm mt-2`}>
+                    {plan.short_description}
+                  </p>
+                </div>
+                <div className="space-y-4 mb-8">
+                  {planFeatures.status === 200 &&
+                    planFeatures.data
+                      .filter((feature) => feature.plan_id === plan.id)
+                      .map((feature, index) => <Feature key={index+feature.plan_id}>{feature.value}</Feature>)}
+                </div>
+                <button className={`w-full bg-${plan.plan_color} hover:bg-green-400 transition-colors text-black font-semibold py-3 px-4 rounded-lg flex items-center justify-center gap-2`}>
+                  <span>{plan.button_icon}</span> {plan.button_text}
+                </button>
               </div>
-              <p className="text-green-500 text-sm mt-2">
-                Gratis para siempre, sin tarjeta requerida
-              </p>
-            </div>
-            <div className="space-y-4 mb-8">
-              <Feature>Gestión ilimitada de tareas</Feature>
-              <Feature>Logros y medallas básicas</Feature>
-              <Feature>Temporizador Pomodoro</Feature>
-              <Feature>Estadísticas semanales</Feature>
-              <Feature>Acceso a comunidad</Feature>
-            </div>
-            <button className="w-full bg-green-500 hover:bg-green-400 transition-colors text-black font-semibold py-3 px-4 rounded-lg flex items-center justify-center gap-2">
-              <span>🚀</span> Empezar gratis
-            </button>
-          </div>
-
-          {/* Plan Pro */}
-          <div className="rounded-xl bg-zinc-900 p-6 border border-yellow-400/50 relative">
-            <div className="absolute -top-3 right-6 bg-yellow-400 text-black text-sm font-semibold px-3 py-1 rounded-full">
-              PRO
-            </div>
-            <h3 className="text-xl font-semibold mb-4">Plan Pro</h3>
-            <div className="mb-6">
-              <div className="flex items-baseline gap-1">
-                <span className="text-4xl font-bold">$3.990</span>
-                <span className="text-zinc-500">CLP/mes</span>
-              </div>
-              <p className="text-yellow-400 text-sm mt-2">
-                7 días de prueba gratis
-              </p>
-            </div>
-            <div className="space-y-4 mb-8">
-              <Feature>Todo lo del Básico</Feature>
-              <Feature>Retos diarios y semanales</Feature>
-              <Feature>Personalización de avatar</Feature>
-              <Feature>Integración con Google Calendar</Feature>
-              <Feature>Recompensas avanzadas</Feature>
-            </div>
-            <button className="w-full bg-yellow-400 hover:bg-yellow-300 transition-colors text-black font-semibold py-3 px-4 rounded-lg flex items-center justify-center gap-2">
-              <span>⭐</span> Probar Pro
-            </button>
-          </div>
-
-          {/* Plan Élite */}
-          <div className="rounded-xl bg-zinc-900 p-6 border border-purple-500/50 relative">
-            <div className="absolute -top-3 right-6 bg-purple-500 text-white text-sm font-semibold px-3 py-1 rounded-full">
-              ÉLITE
-            </div>
-            <h3 className="text-xl font-semibold mb-4">Plan Élite</h3>
-            <div className="mb-6">
-              <div className="flex items-baseline gap-1">
-                <span className="text-4xl font-bold">$7.990</span>
-                <span className="text-zinc-500">CLP/mes</span>
-              </div>
-              <p className="text-purple-400 text-sm mt-2">
-                Funcionalidades exclusivas
-              </p>
-            </div>
-            <div className="space-y-4 mb-8">
-              <Feature>Todo lo del Pro</Feature>
-              <Feature>Ranking global y local</Feature>
-              <Feature>Desafíos entre amigos</Feature>
-              <Feature>Temas y fondos exclusivos</Feature>
-              <Feature>Soporte prioritario</Feature>
-            </div>
-            <button className="w-full bg-purple-500 hover:bg-purple-400 transition-colors text-white font-semibold py-3 px-4 rounded-lg flex items-center justify-center gap-2">
-              <span>👑</span> Ser Élite
-            </button>
-          </div>
+            ))}
+         
         </div>
       </div>
     </div>

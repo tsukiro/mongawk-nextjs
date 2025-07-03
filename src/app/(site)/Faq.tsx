@@ -1,66 +1,9 @@
 "use client";
 
+import { Faqs } from "@/types/Faqs";
 import { useState } from "react";
 
-interface FAQItem {
-  question: string;
-  answer: string;
-}
-
-const faqs: FAQItem[] = [
-  {
-    question: "Is this really free?",
-    answer:
-      "Yes! ShipFree is open-source and community-driven. Use it for unlimited projects, no strings attached.",
-  },
-  {
-    question: "What do I need to use ShipFree?",
-    answer:
-      "All you need is a GitHub account to clone the repo and a deployment platform like Vercel or Railway.",
-  },
-  {
-    question: "Can I customize it?",
-    answer:
-      "Built with Next.js, Tailwind, and modern tools, ShipFree is fully extensible.",
-  },
-  {
-    question: "How does it compare to ShipFast?",
-    answer:
-      "ShipFast is paid; ShipFree gives you similar core features—completely free! Perfect for bootstrappers who want to launch now.",
-  },
-  {
-    question: "Does ShipFree include a database?",
-    answer: "Yes! It supports MongoDB and Supabase out of the box.",
-  },
-  {
-    question: "Is there a community I can join?",
-    answer:
-      "Yes! We have an active Discord community where founders help each other grow.",
-  },
-  {
-    question: "What if I need help?",
-    answer:
-      "We have detailed documentation, video tutorials, and community support to guide you.",
-  },
-  {
-    question: "Can I contribute to ShipFree?",
-    answer:
-      "ShipFree is open-source—we welcome contributions from developers worldwide.",
-  },
-
-  {
-    question: "Can I use ShipFree for commercial projects?",
-    answer:
-      "Yes! You can launch and scale real businesses with ShipFree. No restrictions.",
-  },
-  {
-    question: "Is there a roadmap for future features?",
-    answer:
-      "Yes! We're constantly improving ShipFree. Check our GitHub roadmap to see what's coming next.",
-  },
-];
-
-export default function FAQ() {
+export default function FAQ({faqs}: { faqs: Faqs }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggleQuestion = (index: number) => {
@@ -74,10 +17,10 @@ export default function FAQ() {
     >
       <div className="mx-auto max-w-3xl">
         <h2 className="mb-4 text-center text-4xl font-medium text-white">
-          Frequently Asked Questions
+          Preguntas Frecuentes
         </h2>
         <p className="mb-12 text-center text-base text-zinc-500">
-          Have another question? Contact us on{" "}
+          ¿Tienes alguna otra duda? Contactanos por{" "}
           <a
             href="https://x.com/idee8agency"
             target="_blank"
@@ -85,9 +28,9 @@ export default function FAQ() {
           >
             Twitter
           </a>{" "}
-          or by{" "}
+          o via{" "}
           <a
-            href="mailto:hi@idee8.agency"
+            href="mailto:contacto@raion.cl"
             target="_blank"
             className="text-zinc-200 hover:text-white underline"
           >
@@ -97,7 +40,7 @@ export default function FAQ() {
         </p>
 
         <div className="space-y-[2px]">
-          {faqs.map((faq, index) => (
+          {faqs.status === 200 && faqs.data.map((faq, index) => (
             <div key={index} className="overflow-hidden">
               <button
                 onClick={() => toggleQuestion(index)}

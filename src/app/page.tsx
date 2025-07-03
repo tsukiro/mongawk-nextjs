@@ -19,16 +19,17 @@ export default async function Home() {
   const supabase = await createClient();
   const plans = await supabase.from("public_plans").select("*");
   const plan_features = await supabase.from("public_plan_features").select("*");
+  const faqs = await supabase.from("public_faq").select("*");
 
   return (
     <div className="bg-[#212121]">
       <Navbar />
       <HeroSection />
-      <FeaturedTime />
-      <MakerIntro />
+     {/*  <FeaturedTime /> */}
+     {/*  <MakerIntro /> */}
       <PricingSection plans={plans} planFeatures={plan_features} />
-      <FAQ />
-      <TestimonialsPage />
+      <FAQ faqs={faqs} />
+     {/*  <TestimonialsPage /> */}
       <CTA />
       <Footer />
     </div>

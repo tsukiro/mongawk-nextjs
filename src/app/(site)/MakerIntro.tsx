@@ -12,7 +12,7 @@ export default function MakerIntro() {
 
           <div className="space-y-4">
             <h1 className="text-2xl font-semibold text-white">
-              Built for Founders, by Founders 🚀
+              Diseñado para creadores, soñadores y makers 🚀
             </h1>
             <p className="text-base">
               We were tired of spending weeks on setup instead of actually
@@ -54,14 +54,14 @@ export default function MakerIntro() {
           </ol>
 
           <p className="text-base">
-            Thousands of founders have used ShipFree to{" "}
+            Organiza tu vida de forma divertida{" "}
             <a
               href="#"
               className="text-white hover:text-gray-200 underline underline-offset-2"
             >
-              launch, land clients, and generate revenue
+              No más listas aburridas. En Mongawk tus pendientes se convierten en desafíos.
             </a>
-            —all without paying a dime. Scroll down to see what they say! 🚀
+            ¡Completa misiones, desbloquea niveles y evoluciona tu personaje mientras conquistas tu día a día! 🚀
           </p>
         </div>
       </div>

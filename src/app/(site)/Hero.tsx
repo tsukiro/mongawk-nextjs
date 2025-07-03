@@ -18,10 +18,10 @@ const HeroSection = () => {
           </div>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 text-[#CFCFCF] leading-tight">
-            Sube de nivel!
+            Tú no procrastinas, 
             <br />
-            in days,{" "}
-            <span className="bg-[#CFCFCF] text-[#2E1A05] px-2">not weeks</span>
+            solo necesitas{" "}<br />
+            <span className="bg-[#CFCFCF] text-[#2E1A05] px-2">una historia</span>
           </h1>
 
           <p className="text-base text-[#CFCFCF] mb-8 max-w-2xl mx-auto lg:mx-0">

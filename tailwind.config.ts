@@ -9,6 +9,11 @@ export default {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  safelist: [
+    {
+      pattern: /bg-(red|green|blue|purple|yellow)-(100|200|300|400|500)/,
+    },
+  ],
   theme: {
     extend: {
       colors: {

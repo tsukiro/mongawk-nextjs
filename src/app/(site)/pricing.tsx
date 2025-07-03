@@ -22,13 +22,13 @@ export default function PricingSection({
         <div className="text-center mb-16">
           <p className="text-[#FFBE18] font-medium mb-4">Precios</p>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Ahorra horas de código repetitivo,
+            Organiza tu vida de forma divertida,
             <br />
-            ¡envía rápido y sé rentable!
+            LEVEL UP YOURSELF
           </h2>
           <p className="text-green-500 flex items-center justify-center gap-2">
             <span className="inline-block">🎉</span>
-            ¡100% Gratis Para Siempre!
+            ¡Elige el plan que más te acomode!
           </p>
         </div>
 

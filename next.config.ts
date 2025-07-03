@@ -28,10 +28,6 @@ const nextConfig = {
         ],
       },
     ];
-  },
-  images: {
-    remotePatterns: [new URL('https://placehold.co/500x500')],
-    dangerouslyAllowSVG: true,
   }
 } satisfies NextConfig;
 

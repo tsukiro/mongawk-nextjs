@@ -46,7 +46,7 @@ export default function PricingSection({
                 <div className="mb-6">
                   <div className="flex items-baseline gap-1">
                     <span className="text-4xl font-bold">
-                      ${plan.monthly_cost}
+                      {new Intl.NumberFormat("es-CL", { style: "currency", currency: plan.currency }).format(plan.monthly_cost,)}
                     </span>
                     <span className="text-zinc-500">{plan.currency}/mes</span>
                   </div>

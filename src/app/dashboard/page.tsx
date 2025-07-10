@@ -1,12 +1,13 @@
-import AccountForm from "./account-form";
-import { createClient } from "@/lib/supabase/server";
+/*import AccountForm from "./account-form";
+import { createClient } from "@/lib/supabase/server";*/
+import Profile from "./profile";
 
 export default async function Dashboard() {
-  const supabase = await createClient();
+  //const supabase = await createClient();
 
-  const {
+  /* const {
     data: { user },
   } = await supabase.auth.getUser();
-
-  return <AccountForm user={user} />;
+ */
+  return <>{/* <AccountForm user={user} /> */}<Profile /></>;
 }
